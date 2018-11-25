@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*和Grade和Partner是单向一对多关系，可实现单向的多对一级联，问题是，在
+ * 级联添加时，一的一端，会重复值出现，设为Unique时，有重复值时，报错*/
 @Entity
 @Table(name="grade_info")
 public class Grade implements Serializable{
